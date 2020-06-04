@@ -175,6 +175,7 @@ public class SortTest {
         for (int i = 0; i < array1.length; i++) {
             junit.framework.TestCase.assertTrue("The value of index:" + i + " is not matching", array1[i] == array2[i]);
         }
+        junit.framework.TestCase.assertTrue("The lenght of arrays are not equal", array1.length == array2.length);
     }
 
 }
