@@ -34,7 +34,6 @@ public class Sort {
         int[] returnArray = sortFromSmallestToBiggest(copyArray);
 
         reverse(returnArray);
-
         return returnArray;
     }
 
@@ -51,18 +50,6 @@ public class Sort {
         return returnIndex;
     }
 
-//    private static int returnBiggestIndexOfArray(int[] array) {
-//        int largest = returnSmallestNumberOfArray(array);
-//        int returnIndex = 0;
-//        for (int i = 0; i < array.length; i++) {
-//            if (array[i] >= largest) {
-//                largest = array[i];
-//                returnIndex = i;
-//            }
-//        }
-//        return returnIndex;
-//    }
-
     private static int returnLargestNumberOfArray(int[] array) {
         int largest = 0;
         for (int i = 0; i < array.length; i++) {
@@ -73,15 +60,6 @@ public class Sort {
         return largest;
     }
 
-//    private static int returnSmallestNumberOfArray(int[] array) {
-//        int smallest = returnLargestNumberOfArray(array) + 1;
-//        for (int i = 0; i < array.length; i++) {
-//            if (array[i] < smallest) {
-//                smallest = array[i];
-//            }
-//        }
-//        return smallest;
-//    }
 
     private static void reverse(int[] array) {
         if (array == null || array.length <= 1) {
