@@ -14,8 +14,6 @@ public class SortTest {
         int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
         int[] sortedArray = sort.sortFromSmallestToBiggest(array);
         Arrays.sort(array);
-//        printArray(array);
-//        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
@@ -24,10 +22,7 @@ public class SortTest {
         Sort sort = new Sort();
         int[] array = {3, 8, 5, 1, 1, 0, 0};
         int[] sortedArray = sort.sortFromSmallestToBiggest(array);
-//        printArray(array);
         Arrays.sort(array);
-//        printArray(array);
-//        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
@@ -36,62 +31,49 @@ public class SortTest {
         Sort sort = new Sort();
         int[] array = {3, 8, 5, 1, 1, 0, 0};
         int[] sortedArray = sort.sortFromBiggestToSmallest(array);
-//        printArray(array);
         Arrays.sort(array);
-//        printArray(array);
         reverse(array);
-//        printArray(array);
-//        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
     @Test
     public void testSortAscendingRandom() {
         int[] array = new int[(int) (100 * Math.random())];
-        setRanbomsToIntArray(array);
-//        printArray(array);
+        setRandomsToIntArray(array);
         int[] sortedArray = Sort.sortFromSmallestToBiggest(array);
         Arrays.sort(array);
-//        printArray(array);
-//        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
     @Test
     public void testSortAscendingRandomWithNegativeInts() {
         int[] array = new int[(int) (100 * Math.random())];
-        setNegativeRanbomsToIntArray(array);
-        printArray(array);
+        setNegativeRandomsToIntArray(array);
         int[] sortedArray = Sort.sortFromSmallestToBiggest(array);
         Arrays.sort(array);
-        printArray(array);
-        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
     @Test
     public void testSortDescendingRandom() {
         int[] array = new int[(int) (100 * Math.random())];
-        setRanbomsToIntArray(array);
-//        printArray(array);
+        setRandomsToIntArray(array);
         int[] sortedArray = Sort.sortFromBiggestToSmallest(array);
         Arrays.sort(array);
         reverse(array);
-//        printArray(array);
-//        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
     @Test
     public void testSortDescendingRandomWithNegativeInts() {
         int[] array = new int[(int) (100 * Math.random())];
-        setNegativeRanbomsToIntArray(array);
-        printArray(array);
+        setNegativeRandomsToIntArray(array);
+//        printArray(array);
         int[] sortedArray = Sort.sortFromBiggestToSmallest(array);
         Arrays.sort(array);
         reverse(array);
-        printArray(array);
-        printArray(sortedArray);
+//        printArray(array);
+//        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
@@ -110,30 +92,24 @@ public class SortTest {
     @Test
     public void testAscendingLenghtOne() {
         int[] array = new int[1];
-        setRanbomsToIntArray(array);
-        printArray(array);
+        setRandomsToIntArray(array);
         int[] sortedArray = Sort.sortFromSmallestToBiggest(array);
         Arrays.sort(array);
-        printArray(array);
-        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
     @Test
     public void testDescendingLenghtOne() {
         int[] array = new int[1];
-        setRanbomsToIntArray(array);
-        printArray(array);
+        setRandomsToIntArray(array);
         int[] sortedArray = Sort.sortFromBiggestToSmallest(array);
         Arrays.sort(array);
         reverse(array);
-        printArray(array);
-        printArray(sortedArray);
         validateArrays(array, sortedArray);
     }
 
 
-    private void setRanbomsToIntArray(int[] array) {
+    private void setRandomsToIntArray(int[] array) {
         if (array == null || array.length <= 0) {
             return;
         }
@@ -143,7 +119,7 @@ public class SortTest {
         }
     }
 
-    private void setNegativeRanbomsToIntArray(int[] array) {
+    private void setNegativeRandomsToIntArray(int[] array) {
         if (array == null || array.length <= 0) {
             return;
         }
