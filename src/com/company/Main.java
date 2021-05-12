@@ -12,11 +12,11 @@ public class Main {
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(Sort.sortFromSmallestToBiggest(array)));
 
-		System.out.println("Is trend rising: " + Trend.isRising(Sort.sortFromSmallestToBiggest(array)));
-		System.out.println("Is trend lowering: " + Trend.isLowering(Sort.sortFromSmallestToBiggest(array)));
+		System.out.println("Is trend rising: " + TrendSolver.trendSolver(Sort.sortFromSmallestToBiggest(array)));
+		System.out.println("Is trend lowering: " + TrendSolver.trendSolver(Sort.sortFromSmallestToBiggest(array)));
 		int[] array1 = {-12, -12, -12, -12, -12, -12, -12};
-		System.out.println("Is trend rising or stable: " + Trend.isRisingOrStable(array1));
-		System.out.println("Is trend lowering or stable: " + Trend.isLoweringOrStable(array1));
+		System.out.println("Is trend rising or stable: " + TrendSolver.trendSolver(array1));
+		System.out.println("Is trend lowering or stable: " + TrendSolver.trendSolver(array1));
     }
 
 }

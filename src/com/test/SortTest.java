@@ -1,10 +1,12 @@
 package com.test;
 
 import com.company.Sort;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SortTest {
 
@@ -147,10 +149,10 @@ public class SortTest {
     }
 
     private void validateArrays(int[] array1, int[] array2) {
-        junit.framework.TestCase.assertTrue("The lenght of arrays are not equal", array1.length == array2.length);
+        assertTrue( array1.length == array2.length, "The lenght of arrays are not equal");
         //for loop for asserts
         for (int i = 0; i < array1.length; i++) {
-            junit.framework.TestCase.assertTrue("The value of index:" + i + " is not matching", array1[i] == array2[i]);
+            assertTrue(array1[i] == array2[i], "The value of index:" + i + " is not matching");
         }
 
     }
